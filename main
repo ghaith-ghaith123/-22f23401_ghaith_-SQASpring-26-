@@ -1,0 +1,103 @@
+ 
+
+#include <iostream> 
+
+using namespace std; 
+
+  
+
+int main() { 
+
+    int touristCount; 
+
+    int hour; 
+
+    string zone; 
+
+     
+
+    cout << "Enter tourist count: "; 
+
+    cin >> touristCount; 
+
+     
+
+    cout << "Enter hour (0-23): "; 
+
+    cin >> hour; 
+
+     
+
+    cout << "Enter zone (Beach/Museum/Park/Mall): "; 
+
+    cin >> zone; 
+
+     
+
+    if (touristCount < 0 || hour < 0 || hour > 23) { 
+
+        cout << "Error: Invalid input values" << endl; 
+
+    } 
+
+    else { 
+
+        switch(zone[0]) { 
+
+            case 'B': case 'b': 
+
+                cout << "Beach - "; 
+
+                break; 
+
+            case 'M': case 'm': 
+
+                cout << "Museum - "; 
+
+                break; 
+
+            case 'P': case 'p': 
+
+                cout << "Park - "; 
+
+                break; 
+
+            default: 
+
+                cout << "Unknown zone - "; 
+
+        } 
+
+         
+
+        if (touristCount <= 500) { 
+
+            cout << "LOW crowd" << endl; 
+
+        } 
+
+        else if (touristCount <= 1500) { 
+
+            cout << "MEDIUM crowd" << endl; 
+
+        } 
+
+        else if (touristCount <= 3000) { 
+
+            cout << "HIGH crowd" << endl; 
+
+        } 
+
+        else { 
+
+            cout << "CRITICAL crowd - Alert!" << endl; 
+
+        } 
+
+    } 
+
+     
+
+    return 0; 
+
+}
